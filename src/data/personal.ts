@@ -59,7 +59,6 @@ export const personal = {
   ],
   metrics: [
     { value: "24/7", label: "SOC Operations" },
-    { value: "", label: "Multiple SIEM/XDR Coverage" },
     { value: "4", label: "SIEM / EDR Platforms" },
   ],
   contactCards: [

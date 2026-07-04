@@ -84,31 +84,18 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {personal.metrics.map((metric) => (
                   <div
                     key={metric.label}
                     className="rounded-lg border border-purple-400/20 bg-purple-950/15 p-4 transition hover:border-purple-300/45 hover:bg-purple-900/20"
                   >
-                    {metric.value ? (
-                      <>
-                        <p className="text-3xl font-semibold leading-none text-white">
-                          {metric.value}
-                        </p>
-                        <p className="mt-3 text-sm leading-6 text-purple-50/75">
-                          {metric.label}
-                        </p>
-                      </>
-                    ) : (
-                      <>
-                        <p className="font-mono text-xs uppercase tracking-[0.18em] text-purple-300">
-                          Coverage
-                        </p>
-                        <p className="mt-2 text-base font-semibold leading-6 text-white">
-                          {metric.label}
-                        </p>
-                      </>
-                    )}
+                    <p className="text-3xl font-semibold leading-none text-white">
+                      {metric.value}
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-purple-50/75">
+                      {metric.label}
+                    </p>
                   </div>
                 ))}
               </div>
