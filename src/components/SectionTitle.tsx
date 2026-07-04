@@ -17,13 +17,13 @@ export function SectionTitle({ eyebrow, title, description }: SectionTitleProps)
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.55, ease: "easeOut" }}
     >
-      <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-green-300">
+      <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.28em] text-purple-300">
         {eyebrow}
       </p>
       <h2 className="text-3xl font-semibold tracking-normal text-white md:text-5xl">
         {title}
       </h2>
-      <p className="mt-5 text-base leading-8 text-green-100/75 md:text-lg">
+      <p className="mt-5 text-base leading-8 text-purple-50/75 md:text-lg">
         {description}
       </p>
     </motion.div>

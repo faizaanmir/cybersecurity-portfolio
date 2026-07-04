@@ -2,7 +2,7 @@ Mir Faizaan Sajjad
 Security Operations Analyst / Detection Engineer
 
 Email: mir_faizaan@outlook.com
-LinkedIn: https://www.linkedin.com/in/mir-faizaan-sajjad/
+LinkedIn: https://www.linkedin.com/in/mir-faizaan-sajjad-8834821a7/
 
 Professional Focus
 Enterprise security operations, detection engineering, threat hunting, incident response, SIEM administration, phishing investigation, and practical security automation.

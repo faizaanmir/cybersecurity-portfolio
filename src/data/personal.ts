@@ -1,15 +1,16 @@
 import {
-  Briefcase,
-  Code,
   Mail,
   ShieldCheck,
   type LucideIcon,
 } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+
+import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
 
 export type SocialLink = {
   label: string;
   href: string;
-  icon: LucideIcon;
+  icon: LucideIcon | ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   value?: string;
 };
 
@@ -19,8 +20,8 @@ export const personal = {
   role: "Security Operations Analyst / Detection Engineer",
   location: "India",
   email: "mir_faizaan@outlook.com",
-  githubHref: "https://github.com/",
-  linkedInHref: "https://www.linkedin.com/in/mir-faizaan-sajjad/",
+  githubHref: "https://github.com/faizaanmir",
+  linkedInHref: "https://www.linkedin.com/in/mir-faizaan-sajjad-8834821a7/",
   resumeHref: "/Resume_MirFaizaanSajjad_2026.pdf",
   titles: [
     "Security Operations Analyst",
@@ -36,13 +37,13 @@ export const personal = {
   socialLinks: [
     {
       label: "GitHub",
-      href: "https://github.com/",
-      icon: Code,
+      href: "https://github.com/faizaanmir",
+      icon: GitHubIcon,
     },
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/mir-faizaan-sajjad/",
-      icon: Briefcase,
+      href: "https://www.linkedin.com/in/mir-faizaan-sajjad-8834821a7/",
+      icon: LinkedInIcon,
     },
     {
       label: "Email",
@@ -58,7 +59,7 @@ export const personal = {
   ],
   metrics: [
     { value: "24/7", label: "SOC Operations" },
-    { value: "10+", label: "Security Domains" },
+    { value: "", label: "Multiple SIEM/XDR Coverage" },
     { value: "4", label: "SIEM / EDR Platforms" },
   ],
   contactCards: [
@@ -71,14 +72,14 @@ export const personal = {
     {
       label: "LinkedIn",
       value: "Connect professionally",
-      href: "https://www.linkedin.com/in/mir-faizaan-sajjad/",
-      icon: Briefcase,
+      href: "https://www.linkedin.com/in/mir-faizaan-sajjad-8834821a7/",
+      icon: LinkedInIcon,
     },
     {
       label: "GitHub",
       value: "Review security projects",
-      href: "https://github.com/",
-      icon: Code,
+      href: "https://github.com/faizaanmir",
+      icon: GitHubIcon,
     },
     {
       label: "Resume",

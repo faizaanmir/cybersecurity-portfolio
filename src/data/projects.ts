@@ -7,7 +7,7 @@ export type Project = {
   solution: string;
   impact: string;
   githubHref: string;
-  accent: "green" | "emerald" | "lime";
+  accent: "purple" | "violet" | "fuchsia";
 };
 
 export const projects: Project[] = [
@@ -23,8 +23,8 @@ export const projects: Project[] = [
       "Designed structured playbooks with hypotheses, required telemetry, query logic, enrichment steps, and escalation notes.",
     impact:
       "Improved hunt repeatability and helped analysts validate suspicious behavior with clearer decision points.",
-    githubHref: "https://github.com/",
-    accent: "green",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "purple",
   },
   {
     title: "Detection Engineering",
@@ -38,8 +38,8 @@ export const projects: Project[] = [
       "Mapped detections to adversary techniques, tuned thresholds, documented intent, and reviewed telemetry prerequisites.",
     impact:
       "Increased signal quality and made detections easier to operate during live investigations.",
-    githubHref: "https://github.com/",
-    accent: "emerald",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "violet",
   },
   {
     title: "QRadar Upgrade",
@@ -53,8 +53,8 @@ export const projects: Project[] = [
       "Validated key use cases, reviewed parser behavior, monitored system health, and supported controlled rollout steps.",
     impact:
       "Helped maintain SOC continuity while improving platform stability and readiness.",
-    githubHref: "https://github.com/",
-    accent: "lime",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "fuchsia",
   },
   {
     title: "SIEM Rule Development",
@@ -68,8 +68,8 @@ export const projects: Project[] = [
       "Created rule logic, tested against available telemetry, tuned false positives, and wrote analyst response notes.",
     impact:
       "Expanded detection coverage and reduced ambiguity during triage.",
-    githubHref: "https://github.com/",
-    accent: "green",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "purple",
   },
   {
     title: "Python IOC Extractor",
@@ -83,8 +83,8 @@ export const projects: Project[] = [
       "Built a typed parser workflow that normalizes indicators and prepares clean output for enrichment tools.",
     impact:
       "Reduced repetitive analyst effort and improved consistency in investigation notes.",
-    githubHref: "https://github.com/",
-    accent: "emerald",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "violet",
   },
   {
     title: "SOC Investigation Reports",
@@ -98,8 +98,8 @@ export const projects: Project[] = [
       "Created consistent report sections for evidence, analysis, scope, impact, actions, and recommendations.",
     impact:
       "Improved clarity for handoffs, escalations, and after-action review.",
-    githubHref: "https://github.com/",
-    accent: "lime",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "fuchsia",
   },
   {
     title: "Phishing Investigation Workflow",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
       "Defined a repeatable workflow covering header review, link analysis, IOC extraction, scope checks, and user response.",
     impact:
       "Made phishing triage faster, clearer, and more defensible.",
-    githubHref: "https://github.com/",
-    accent: "green",
+    githubHref: "https://github.com/faizaanmir",
+    accent: "purple",
   },
 ];

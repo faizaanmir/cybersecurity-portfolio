@@ -27,7 +27,7 @@ export default function Home() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   return (
-    <div className="min-h-screen bg-black text-green-50">
+    <div className="min-h-screen bg-black text-purple-50">
       <LoadingScreen />
       <ScrollProgress />
       <Navbar />
@@ -37,7 +37,7 @@ export default function Home() {
           id="home"
           className="relative isolate flex min-h-screen items-center overflow-hidden px-4 pb-20 pt-28 sm:px-6 lg:px-8"
         >
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(34,197,94,0.22),transparent_28%),radial-gradient(circle_at_80%_12%,rgba(16,185,129,0.16),transparent_24%),linear-gradient(135deg,#000000_0%,#031109_48%,#020403_100%)]" />
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(168,85,247,0.24),transparent_28%),radial-gradient(circle_at_80%_12%,rgba(217,70,239,0.14),transparent_24%),linear-gradient(135deg,#000000_0%,#10051d_48%,#030106_100%)]" />
           <div className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-black to-transparent" />
 
           <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
@@ -46,7 +46,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65 }}
             >
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.32em] text-green-300">
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.32em] text-purple-300">
                 Enterprise Cybersecurity / {personal.location}
               </p>
               <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-normal text-white md:text-7xl">
@@ -55,7 +55,7 @@ export default function Home() {
               <p className="mt-5 text-xl md:text-2xl">
                 <RotatingTitle titles={personal.titles} />
               </p>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-green-100/80 md:text-lg">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-purple-50/80 md:text-lg">
                 {personal.tagline}
               </p>
               <div className="mt-8">
@@ -64,22 +64,22 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="relative overflow-hidden rounded-lg border border-green-400/20 bg-black/75 p-6 shadow-2xl shadow-green-950/30 backdrop-blur"
+              className="relative overflow-hidden rounded-lg border border-purple-400/25 bg-black/75 p-6 shadow-2xl shadow-purple-950/30 backdrop-blur"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.65, delay: 0.12 }}
             >
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-300 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent" />
               <div className="mb-6 flex items-center justify-between gap-4">
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-green-300">
+                  <p className="font-mono text-xs uppercase tracking-[0.24em] text-purple-300">
                     Security Operating View
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold text-white">
                     Detection-first analyst profile
                   </h2>
                 </div>
-                <span className="rounded-md border border-green-400/30 bg-green-400/10 px-3 py-1.5 font-mono text-xs text-green-200">
+                <span className="rounded-md border border-purple-400/35 bg-purple-400/15 px-3 py-1.5 font-mono text-xs text-purple-100">
                   Active
                 </span>
               </div>
@@ -88,20 +88,22 @@ export default function Home() {
                 {personal.metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="rounded-lg border border-green-400/15 bg-green-950/20 p-5 transition hover:border-green-300/40 hover:bg-green-900/20"
+                    className="rounded-lg border border-purple-400/20 bg-purple-950/20 p-5 transition hover:border-purple-300/45 hover:bg-purple-900/20"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div>
-                        <p className="text-3xl font-semibold text-white">
-                          {metric.value}
-                        </p>
-                        <p className="mt-2 text-sm text-green-100/75">
+                        {metric.value ? (
+                          <p className="text-3xl font-semibold text-white">
+                            {metric.value}
+                          </p>
+                        ) : null}
+                        <p className={metric.value ? "mt-2 text-sm text-purple-50/75" : "text-xl font-semibold text-white"}>
                           {metric.label}
                         </p>
                       </div>
-                      <span className="h-2 w-24 overflow-hidden rounded-full bg-green-950">
+                      <span className="h-2 w-24 overflow-hidden rounded-full bg-purple-950">
                         <motion.span
-                          className="block h-full rounded-full bg-gradient-to-r from-green-600 to-green-300"
+                          className="block h-full rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-300"
                           initial={{ width: "0%" }}
                           animate={{ width: "78%" }}
                           transition={{ duration: 0.9, delay: 0.35 }}
@@ -111,11 +113,11 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="mt-5 rounded-lg border border-green-300/20 bg-green-400/[0.08] p-4">
-                <p className="font-mono text-xs uppercase tracking-[0.22em] text-green-300">
+              <div className="mt-5 rounded-lg border border-purple-300/25 bg-purple-400/[0.1] p-4">
+                <p className="font-mono text-xs uppercase tracking-[0.22em] text-purple-300">
                   Current Signal
                 </p>
-                <p className="mt-2 text-sm leading-6 text-green-50/85">
+                <p className="mt-2 text-sm leading-6 text-purple-50/85">
                   Turning noisy telemetry into tuned detections, repeatable hunts,
                   and cleaner incident response handoffs.
                 </p>
@@ -125,7 +127,7 @@ export default function Home() {
           <motion.a
             href="#about"
             aria-label="Scroll to about section"
-            className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 rounded-full border border-green-400/20 bg-green-950/20 px-4 py-2 font-mono text-xs uppercase tracking-[0.2em] text-green-100/75 backdrop-blur transition hover:border-green-300/40 hover:text-green-100 md:inline-flex"
+            className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 rounded-full border border-purple-400/25 bg-purple-950/25 px-4 py-2 font-mono text-xs uppercase tracking-[0.2em] text-purple-50/75 backdrop-blur transition hover:border-purple-300/45 hover:text-purple-50 md:inline-flex"
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -144,7 +146,7 @@ export default function Home() {
               {personal.profileHighlights.map((highlight, index) => (
                 <motion.article
                   key={highlight}
-                  className="rounded-lg border border-green-400/15 bg-green-950/15 p-5 text-green-50/85 shadow-xl shadow-green-950/20"
+                  className="rounded-lg border border-purple-400/20 bg-purple-950/15 p-5 text-purple-50/85 shadow-xl shadow-purple-950/20"
                   initial={{ opacity: 0, y: 18 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}

@@ -24,13 +24,13 @@ export function Navbar() {
   const activeSection = useActiveSection(ids);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-green-400/15 bg-black/80 backdrop-blur-xl">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-purple-400/20 bg-black/80 backdrop-blur-xl">
       <nav
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Primary navigation"
       >
         <a href="#home" className="group flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-lg border border-green-300/35 bg-green-400/10 font-mono text-sm font-bold text-green-200 shadow-[0_0_30px_rgba(34,197,94,0.18)]">
+          <span className="grid h-10 w-10 place-items-center rounded-lg border border-purple-300/35 bg-purple-400/15 font-mono text-sm font-bold text-purple-100 shadow-[0_0_30px_rgba(168,85,247,0.2)]">
             {personal.initials}
           </span>
           <span className="hidden text-sm font-semibold text-white sm:block">
@@ -44,8 +44,8 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-lg px-3 py-2 text-sm font-medium text-green-100/70 transition hover:bg-green-400/10 hover:text-green-50",
-                activeSection === item.id && "bg-green-500/15 text-green-200",
+                "rounded-lg px-3 py-2 text-sm font-medium text-purple-50/70 transition hover:bg-purple-400/10 hover:text-purple-50",
+                activeSection === item.id && "bg-purple-500/20 text-purple-100",
               )}
             >
               {item.label}
@@ -57,7 +57,7 @@ export function Navbar() {
           <motion.a
             href={personal.resumeHref}
             download
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-green-400 px-4 text-sm font-semibold text-black transition hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-black"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-purple-500 px-4 text-sm font-semibold text-white transition hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black"
             whileHover={{ y: -1 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -67,7 +67,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-green-400/20 bg-green-950/20 text-green-100 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-purple-400/25 bg-purple-950/25 text-purple-100 lg:hidden"
           type="button"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
@@ -79,7 +79,7 @@ export function Navbar() {
 
       {open ? (
         <motion.div
-          className="border-t border-green-400/15 bg-black/95 px-4 py-4 backdrop-blur-xl lg:hidden"
+          className="border-t border-purple-400/20 bg-black/95 px-4 py-4 backdrop-blur-xl lg:hidden"
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -90,8 +90,8 @@ export function Navbar() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "rounded-lg px-3 py-3 text-sm font-medium text-green-100/70",
-                  activeSection === item.id && "bg-green-500/15 text-green-200",
+                  "rounded-lg px-3 py-3 text-sm font-medium text-purple-50/70",
+                  activeSection === item.id && "bg-purple-500/20 text-purple-100",
                 )}
               >
                 {item.label}

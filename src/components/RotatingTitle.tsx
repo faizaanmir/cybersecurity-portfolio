@@ -19,7 +19,7 @@ export function RotatingTitle({ titles }: RotatingTitleProps) {
   }, [titles.length]);
 
   return (
-    <span className="inline-grid min-h-9 overflow-hidden text-green-100 md:min-h-10">
+    <span className="inline-grid min-h-9 overflow-hidden text-purple-100 md:min-h-10">
       <AnimatePresence mode="wait">
         <motion.span
           key={titles[index]}

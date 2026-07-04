@@ -52,16 +52,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           onMouseDown={onClose}
         >
           <motion.div
-            className="max-h-[88vh] w-full max-w-4xl overflow-y-auto rounded-lg border border-green-400/20 bg-black shadow-2xl shadow-black"
+            className="max-h-[88vh] w-full max-w-4xl overflow-y-auto rounded-lg border border-purple-400/25 bg-black shadow-2xl shadow-black"
             initial={{ opacity: 0, y: 22, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.22 }}
             onMouseDown={(event) => event.stopPropagation()}
           >
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-green-400/15 bg-black/90 px-5 py-4 backdrop-blur">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-purple-400/20 bg-black/90 px-5 py-4 backdrop-blur">
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.22em] text-green-300">
+                <p className="font-mono text-xs uppercase tracking-[0.22em] text-purple-300">
                   {project.category}
                 </p>
                 <h3
@@ -74,7 +74,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <button
                 type="button"
                 onClick={onClose}
-                className="grid h-10 w-10 place-items-center rounded-lg border border-green-400/15 bg-green-950/25 text-green-100 transition hover:bg-green-900/30 focus:outline-none focus:ring-2 focus:ring-green-300"
+                className="grid h-10 w-10 place-items-center rounded-lg border border-purple-400/20 bg-purple-950/25 text-purple-100 transition hover:bg-purple-900/30 focus:outline-none focus:ring-2 focus:ring-purple-300"
                 aria-label="Close project details"
               >
                 <X size={18} />
@@ -82,15 +82,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <div className="grid gap-8 p-5 md:p-8">
-              <div className="rounded-lg border border-green-400/15 bg-gradient-to-br from-green-500/15 via-emerald-400/10 to-black p-5">
-                <div className="rounded-md border border-green-400/15 bg-black/60 p-5">
-                  <p className="text-sm leading-7 text-green-50/85">
+              <div className="rounded-lg border border-purple-400/20 bg-gradient-to-br from-purple-500/15 via-violet-400/10 to-black p-5">
+                <div className="rounded-md border border-purple-400/20 bg-black/60 p-5">
+                  <p className="text-sm leading-7 text-purple-50/85">
                     {project.overview}
                   </p>
                   <div className="mt-5 grid grid-cols-3 gap-3">
-                    <div className="h-20 rounded-md border border-green-300/20 bg-green-400/10" />
-                    <div className="h-20 rounded-md border border-emerald-300/20 bg-emerald-400/10" />
-                    <div className="h-20 rounded-md border border-lime-300/20 bg-lime-400/10" />
+                    <div className="h-20 rounded-md border border-purple-300/25 bg-purple-400/15" />
+                    <div className="h-20 rounded-md border border-violet-300/25 bg-violet-400/15" />
+                    <div className="h-20 rounded-md border border-fuchsia-300/25 bg-fuchsia-400/15" />
                   </div>
                 </div>
               </div>
@@ -99,12 +99,12 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {detailRows.map((row) => (
                   <article
                     key={row.key}
-                    className="rounded-lg border border-green-400/15 bg-green-950/15 p-4"
+                    className="rounded-lg border border-purple-400/20 bg-purple-950/15 p-4"
                   >
                     <h4 className="text-sm font-semibold text-white">
                       {row.label}
                     </h4>
-                    <p className="mt-3 text-sm leading-7 text-green-100/75">
+                    <p className="mt-3 text-sm leading-7 text-purple-50/75">
                       {project[row.key]}
                     </p>
                   </article>
@@ -119,7 +119,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-md border border-green-400/15 bg-green-950/25 px-3 py-1.5 font-mono text-xs text-green-100/85"
+                      className="rounded-md border border-purple-400/20 bg-purple-950/25 px-3 py-1.5 font-mono text-xs text-purple-50/85"
                     >
                       {technology}
                     </span>
@@ -131,7 +131,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 href={project.githubHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-fit items-center gap-2 rounded-lg bg-green-500 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 focus:ring-offset-black"
+                className="inline-flex w-fit items-center gap-2 rounded-lg bg-purple-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black"
               >
                 <ExternalLink aria-hidden="true" size={16} />
                 View GitHub Reference
