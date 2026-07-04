@@ -1,0 +1,49 @@
+Mir Faizaan Sajjad
+Security Operations Analyst / Detection Engineer
+
+Email: mir_faizaan@outlook.com
+LinkedIn: https://www.linkedin.com/in/mir-faizaan-sajjad/
+
+Professional Focus
+Enterprise security operations, detection engineering, threat hunting, incident response, SIEM administration, phishing investigation, and practical security automation.
+
+Experience
+Orange Business
+Security Specialist
+September 2023 - Present
+
+Focus areas:
+- Security monitoring and alert triage
+- Incident response and phishing investigation
+- Threat hunting and detection engineering
+- SIEM rule tuning and QRadar administration
+- Microsoft Sentinel and Splunk investigation workflows
+- Python automation for repeatable analyst tasks
+
+Selected achievements:
+- Supported QRadar upgrade activities
+- Supported Netscout integration work
+- Improved detection coverage and operational clarity
+
+TechBoxx
+Student Trainee
+
+Focus areas:
+- Networking fundamentals
+- Cloud fundamentals
+- Infrastructure troubleshooting habits
+
+Skills
+SIEM: IBM QRadar, Microsoft Sentinel, Splunk
+EDR: Carbon Black, Microsoft Defender
+Security: Threat hunting, detection engineering, MITRE ATT&CK, incident response
+Programming: Python, PowerShell, Bash, JavaScript
+Networking: DNS, TCP/IP, DHCP, VPN
+Cloud: AWS, Azure
+
+Certifications
+- Microsoft SC-200
+- Splunk Certified Power User
+- PCDRA
+- Fortinet Fundamentals
+- StationX Cyber Security Course
