@@ -73,49 +73,48 @@ export default function Home() {
               <div className="mb-6 flex items-center justify-between gap-4">
                 <div>
                   <p className="font-mono text-xs uppercase tracking-[0.24em] text-purple-300">
-                    Security Operating View
+                    Analyst Focus
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold text-white">
-                    Detection-first analyst profile
+                    SOC operations and detection engineering
                   </h2>
                 </div>
-                <span className="rounded-md border border-purple-400/35 bg-purple-400/15 px-3 py-1.5 font-mono text-xs text-purple-100">
+                <span className="shrink-0 rounded-md border border-purple-400/35 bg-purple-400/15 px-3 py-1.5 font-mono text-xs text-purple-100">
                   Active
                 </span>
               </div>
 
-              <div className="grid gap-4">
+              <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                 {personal.metrics.map((metric) => (
                   <div
                     key={metric.label}
-                    className="rounded-lg border border-purple-400/20 bg-purple-950/20 p-5 transition hover:border-purple-300/45 hover:bg-purple-900/20"
+                    className="rounded-lg border border-purple-400/20 bg-purple-950/15 p-4 transition hover:border-purple-300/45 hover:bg-purple-900/20"
                   >
-                    <div className="flex items-center justify-between gap-4">
-                      <div>
-                        {metric.value ? (
-                          <p className="text-3xl font-semibold text-white">
-                            {metric.value}
-                          </p>
-                        ) : null}
-                        <p className={metric.value ? "mt-2 text-sm text-purple-50/75" : "text-xl font-semibold text-white"}>
+                    {metric.value ? (
+                      <>
+                        <p className="text-3xl font-semibold leading-none text-white">
+                          {metric.value}
+                        </p>
+                        <p className="mt-3 text-sm leading-6 text-purple-50/75">
                           {metric.label}
                         </p>
-                      </div>
-                      <span className="h-2 w-24 overflow-hidden rounded-full bg-purple-950">
-                        <motion.span
-                          className="block h-full rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-300"
-                          initial={{ width: "0%" }}
-                          animate={{ width: "78%" }}
-                          transition={{ duration: 0.9, delay: 0.35 }}
-                        />
-                      </span>
-                    </div>
+                      </>
+                    ) : (
+                      <>
+                        <p className="font-mono text-xs uppercase tracking-[0.18em] text-purple-300">
+                          Coverage
+                        </p>
+                        <p className="mt-2 text-base font-semibold leading-6 text-white">
+                          {metric.label}
+                        </p>
+                      </>
+                    )}
                   </div>
                 ))}
               </div>
-              <div className="mt-5 rounded-lg border border-purple-300/25 bg-purple-400/[0.1] p-4">
+              <div className="mt-5 rounded-lg border border-purple-300/25 bg-purple-400/[0.08] p-4">
                 <p className="font-mono text-xs uppercase tracking-[0.22em] text-purple-300">
-                  Current Signal
+                  Working Style
                 </p>
                 <p className="mt-2 text-sm leading-6 text-purple-50/85">
                   Turning noisy telemetry into tuned detections, repeatable hunts,
