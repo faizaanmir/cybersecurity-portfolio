@@ -21,7 +21,7 @@ export const personal = {
   email: "mir_faizaan@outlook.com",
   githubHref: "https://github.com/",
   linkedInHref: "https://www.linkedin.com/in/mir-faizaan-sajjad/",
-  resumeHref: "/MirFaizaan2026.pdf",
+  resumeHref: "/Resume_MirFaizaanSajjad_2026.pdf",
   titles: [
     "Security Operations Analyst",
     "Detection Engineer",
@@ -83,7 +83,7 @@ export const personal = {
     {
       label: "Resume",
       value: "Download PDF",
-      href: "/MirFaizaan2026.pdf",
+      href: "/Resume_MirFaizaanSajjad_2026.pdf",
       icon: ShieldCheck,
     },
   ] satisfies SocialLink[],
