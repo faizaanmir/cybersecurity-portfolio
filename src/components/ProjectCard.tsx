@@ -62,6 +62,16 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
         <p className="mt-3 text-sm leading-7 text-purple-50/75">
           {project.overview}
         </p>
+        <div className="mt-5 grid gap-2 text-xs text-purple-50/75">
+          <p>
+            <span className="font-semibold text-purple-200">Problem:</span>{" "}
+            {project.problem}
+          </p>
+          <p>
+            <span className="font-semibold text-purple-200">Impact:</span>{" "}
+            {project.impact}
+          </p>
+        </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.technologies.slice(0, 3).map((technology) => (
             <span
@@ -72,6 +82,10 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
             </span>
           ))}
         </div>
+        <p className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-purple-200 transition group-hover:text-white">
+          View case details
+          <ArrowUpRight aria-hidden="true" size={15} />
+        </p>
       </div>
     </motion.button>
   );

@@ -57,6 +57,24 @@ export const personal = {
     "Threat hunting hypotheses mapped to MITRE ATT&CK",
     "Python and PowerShell automation for repeatable investigations",
   ],
+  recruiterSnapshot: [
+    {
+      label: "Operate",
+      detail: "SOC monitoring, escalation workflows, and incident handoffs.",
+    },
+    {
+      label: "Detect",
+      detail: "SIEM use cases, tuning, and detection quality improvement.",
+    },
+    {
+      label: "Investigate",
+      detail: "Threat hunting, endpoint alerts, phishing, and suspicious access.",
+    },
+    {
+      label: "Automate",
+      detail: "Python and PowerShell workflows for repeatable analysis.",
+    },
+  ],
   metrics: [
     { value: "24/7", label: "SOC Operations" },
   ],

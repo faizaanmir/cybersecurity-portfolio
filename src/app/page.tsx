@@ -157,6 +157,40 @@ export default function Home() {
                 </motion.article>
               ))}
             </div>
+            <div className="mt-10 rounded-lg border border-purple-400/20 bg-black/65 p-5 shadow-2xl shadow-purple-950/20">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-purple-300">
+                    Recruiter Snapshot
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-white">
+                    Where I can contribute quickly
+                  </h3>
+                </div>
+                <a
+                  href={personal.resumeHref}
+                  download
+                  className="inline-flex w-fit rounded-lg border border-purple-300/30 bg-purple-400/10 px-4 py-2 text-sm font-semibold text-purple-50 transition hover:border-purple-300/55 hover:bg-purple-400/15 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black"
+                >
+                  Download resume
+                </a>
+              </div>
+              <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+                {personal.recruiterSnapshot.map((item) => (
+                  <article
+                    key={item.label}
+                    className="rounded-lg border border-purple-400/15 bg-purple-950/15 p-4"
+                  >
+                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-purple-300">
+                      {item.label}
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-purple-50/80">
+                      {item.detail}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
