@@ -59,7 +59,13 @@ export const personal = {
   ],
   metrics: [
     { value: "24/7", label: "SOC Operations" },
-    { value: "4", label: "SIEM / EDR Platforms" },
+  ],
+  focusAreas: [
+    "SOC Analyst",
+    "SIEM",
+    "Incident Response",
+    "Threat Hunting",
+    "Endpoint Security",
   ],
   contactCards: [
     {

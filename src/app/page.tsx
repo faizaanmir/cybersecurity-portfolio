@@ -84,7 +84,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-[0.85fr_1.15fr]">
                 {personal.metrics.map((metric) => (
                   <div
                     key={metric.label}
@@ -98,6 +98,21 @@ export default function Home() {
                     </p>
                   </div>
                 ))}
+                <div className="rounded-lg border border-purple-400/20 bg-purple-950/15 p-4 transition hover:border-purple-300/45 hover:bg-purple-900/20">
+                  <p className="font-mono text-xs uppercase tracking-[0.18em] text-purple-300">
+                    Core Focus
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {personal.focusAreas.map((area) => (
+                      <span
+                        key={area}
+                        className="rounded-md border border-purple-300/20 bg-black/45 px-2.5 py-1.5 text-xs font-medium text-purple-50/85"
+                      >
+                        {area}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className="mt-5 rounded-lg border border-purple-300/25 bg-purple-400/[0.08] p-4">
                 <p className="font-mono text-xs uppercase tracking-[0.22em] text-purple-300">
